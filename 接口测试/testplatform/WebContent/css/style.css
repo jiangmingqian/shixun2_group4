@@ -1,0 +1,370 @@
+﻿@charset "utf-8";
+*{font-size:10pt;border:0;margin:0;padding:0;}
+body{font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
+ul{display:block;margin:0;padding:0;list-style:none;}
+li{display:block;margin:0;padding:0;list-style: none;}
+
+dl,dt,dd,span{margin:0;padding:0;display:block;}
+a,a:focus{text-decoration:none;color:#000;outline:none;blr:expression(this.onFocus=this.blur());}
+a:hover{color:#00a4ac;text-decoration:none;}
+table{border-collapse:collapse;border-spacing: 0;border:1px;}
+cite{font-style:normal;}
+h2{font-weight:normal;}
+#deleteformInfo{display:none;border:solid 1px #ccc;background-color:#d9e4fb;width:250px;height:120px;position:fixed;left:700px;top:200px}
+#deleteformInfo input{border:solid 1px #000;width:200px;height:40px;font-size:18px}
+/*home.jsp*/
+.body1{
+	 width: 1200px;
+     height: auto;
+	text-align:center
+}
+.div1{
+	width:1200px;
+	height:100px;
+	vertical-align: middle
+}
+.div2{
+	width:1200px;height:1px;background-color:grey;margin-top:-48px
+}
+.image1{
+	width:30px;
+	float:left;
+	margin-top:10px
+}
+.image2{
+	width:110px;
+	float:left;
+	margin-left:5px;
+	margin-top:18px;
+}
+#selectProject{
+	width:100px;
+	height:25px;
+	float:right;
+	margin-top:15px;
+}
+.left{
+	width:200px;
+	height:680px;
+	border:1px solid #5cc0ff;
+	float:left;
+	margin-top:30px;
+}
+.homepage{
+	margin-top:10px;
+	width:190px;
+	height:60px;
+	vertical-align: middle;
+}
+.X1{
+	width:200px;
+	height:1px;
+	background-color:#f6f5f5;
+}
+.i3{
+	width:25px;
+	margin-top:18px;
+	margin-left:-80px;
+}
+.homepage a{
+	font-size:20px;
+	font-family:'微软雅黑';
+	font-weight: bold;
+}
+.shouye{
+	margin-top:-30px;
+}
+.shouye1{
+	margin-top:25px;
+}
+.admin ul li ul{
+
+	display: none;/*将 二级 菜单隐藏起来*/
+
+}
+
+
+.admin ul li:hover ul{
+	padding-top:5px 2px 2px 2px;
+
+	display: block;/*当鼠标移动到一级标签后，ul即二级菜单显示出来*/
+
+}
+.admin{
+	position:relative;
+	top:20px;
+	left:540px;
+	cursor:pointer;
+	
+}
+.box1{
+	height:100px;
+	width:200px;
+	border:1px solid #5cc0ff;
+	margin-left:10px;
+}
+.box2{
+	height:100px;
+	width:200px;
+	border:1px solid #5cc0ff;
+	margin-left:250px;
+	margin-top:-102px;
+}
+.box3{
+	height:100px;
+	width:200px;
+	border:1px solid #5cc0ff;
+	margin-left:490px;
+	margin-top:-103px;
+}
+.box4{
+	height:100px;
+	width:200px;
+	border:1px solid #5cc0ff;
+	margin-left:730px;
+	margin-top:-103px;
+}
+.count{
+	margin-top:30px;
+	font-size:20px;
+}
+input{
+	border:1px #5cc0ff solid;
+	background-color:white;
+	border-radius:2px;
+	height:30px;
+	margin-left:40px;
+	
+}
+
+select{
+	border:1px black solid;
+	border-radius:2px;
+	width:60px;
+	height:30px;
+	float:left;
+	margin-left:10px;
+	
+}
+.i1{
+	float:left;
+	border:1px #5cc0ff solid;
+	width:900px;
+	height:60px;
+	margin-top:30px;
+	margin-left:10px;
+		border-radius:5px;
+		
+}
+.ii1{
+	float:left;
+	margin-top:15px;
+}
+#url2{
+	width:300px;
+	
+}
+#send{
+	margin-left:200px;
+	width:60px;
+}
+#save{
+	position:absolute;
+	top:98px;
+	right:300px;
+	width:60px;
+}
+
+.i2{
+	float:left;
+	width:900px;
+	height:600px;
+	border:1px #5cc0ff solid;
+	margin-left:10px;
+	margin-top:20px;
+		border-radius:5px;
+}
+.can1{
+	position:relative;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+	height:40px;
+	width:100px;
+	border:1px #5cc0ff solid;
+	border-radius:5px;
+}
+.can2{
+	position:relative;
+	margin-top:230px;
+	margin-bottom:10px;
+	margin-left:10px;
+	height:40px;
+	width:100px;
+	border:1px #5cc0ff solid;
+	border-radius:5px;
+}
+
+
+textarea{
+	width:500px;
+	height:200px;
+	border:1px #5cc0ff solid;
+		border-radius:5px;
+	float:left;
+	margin-left:10px;
+	font-size:25px;
+}
+#as{
+	margin-top:10px;
+	margin-right:20px;
+}
+#bs{
+	margin-top:10px;
+	
+}
+
+/*Project.jsp*/
+.right{
+	float:left;
+	height:600px;
+	width:900px;
+	margin-top:30px;
+}
+.top{
+	height:60px;
+	width:900px;
+	border:1px solid #5cc0ff;
+	margin-left:10px;
+	border-radius:5px;
+}
+#url{
+	border:1px solid grey;
+	height:30px;
+	width:200px;
+	margin-top:15px;
+	float:left;
+	margin-left:20px;
+	border-radius:5px;
+}
+#button1{
+	border:1px solid grey;
+	height:30px;
+	width:60px;
+	margin-top:15px;
+	float:left;
+	margin-left:40px;
+}
+#button2{
+	border:1px solid grey;
+	border-radius:5px;
+	height:30px;
+	width:60px;
+	margin-top:15px;
+	float:left;
+	margin-left:43px;
+}
+#button3{
+	border:1px solid grey;
+	border-radius:5px;
+	height:30px;
+	width:60px;
+	margin-top:15px;
+	float:left;
+	margin-left:50px;
+}
+#button4{
+	border:1px solid grey;
+	border-radius:5px;
+	height:30px;
+	width:60px;
+	margin-top:15px;
+	float:left;
+	margin-left:55px;
+}
+
+.table1{
+	width:900px; 
+	border:1px solid #5cc0ff; 
+	cellspacing:0;
+	font-size:12px; 
+	font-family:'MS Serif', 'New York', serif;
+	float:left;
+	margin-top:20px;
+	margin-left:10px;
+	border-radius:5px;
+}
+.table1 tr{
+	border:1px solid #5cc0ff; 
+
+}
+.table1 th{
+	border:1px solid #5cc0ff; 
+
+}
+#d1{positive:relative;border:1px solid grey;background-color:white;text-align:center;width:30px;left:10px}
+#formInfo{border:solid 1px #ccc;background-color:#d9e4fb;width:300px;height:450px;display:none;position:fixed;left:800px}
+#formInfo input{border:solid 1px #000;width:200px;height:40px;font-size:18px}
+.buttons{border:solid 1px black;background-color:#eee;cursor:pointer;}
+#cancel{width:60px;height:30px;float:left;margin-top:-32px;margin-left:170px;text-align:center;line-height:30px;font-size:16px}
+
+/*Usecase.jsp*/
+#all{
+	float:left;
+	border:1px solid grey;
+	border-radius:5px;
+	height:28px;
+	width:65px;
+	margin-top:15px;
+}
+#Fall{
+	float:left;
+	border:1px solid grey;
+	border-radius:5px;
+	height:28px;
+	width:65px;
+	margin-top:15px;
+	margin-left:60px;
+}
+.operation ul li ul{
+display: none;/*将 二级 菜单隐藏起来*/
+}
+.operation ul li:hover ul{
+padding-top:5px 2px 2px 2px;
+display: block;/*当鼠标移动到一级标签后，ul即二级菜单显示出来*/
+}
+.operation{
+	position:relative;
+	top:-20px;
+	left:180px;
+	width:200px;
+	cursor:pointer;
+}
+.operation a{
+	width:100px;
+	height:30px;
+	font-size:15px;
+}
+#Z1{position:relative;border:1px solid grey;left:5px;font-size:13px;background-color:white}
+#d2{position:relative;border:1px solid grey;left:10px;font-size:13px;background-color:white}
+/*port.jsp*/
+.count{margin-top:30px;font-size:20px}
+input{border:1px #5cc0ff solid;background-color:white;border-radius:2px;height:30px;margin-left:40px}
+select{border:1px black solid;border-radius:2px;width:60px;height:30px;float:left;margin-left:10px}
+.i1{float:left;border:1px #5cc0ff solid;width:900px;height:60px;margin-top:30px;margin-left:10px;border-radius:5px}
+.ii1{float:left;margin-top:15px}
+#url2{width:300px}
+#send{margin-left:200px;width:60px}
+#save{position:absolute;top:98px;right:300px;width:60px}
+.i2{float:left;width:900px;height:600px;border:1px #5cc0ff solid;margin-left:10px;margin-top:20px;border-radius:5px}
+.can1{position:relative;margin-top:10px;margin-bottom:10px;margin-left:10px;height:40px;width:100px;border:1px #5cc0ff solid;border-radius:5px}
+.can2{position:relative;margin-top:230px;margin-bottom:10px;margin-left:10px;height:40px;width:100px;border:1px #5cc0ff solid;border-radius:5px}
+textarea{width:500px;height:200px;border:1px #5cc0ff solid;border-radius:5px;float:left;margin-left:10px;font-size:25px}
+#as{margin-top:10px;margin-right:20px}
+#bs{margin-top:10px}
+		
+
+
+
+
+
