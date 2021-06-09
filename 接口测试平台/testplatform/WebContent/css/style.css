@@ -307,7 +307,9 @@ textarea{
 #formInfo input{border:solid 1px #000;width:200px;height:40px;font-size:18px}
 .buttons{border:solid 1px black;background-color:#eee;cursor:pointer;}
 #cancel{width:60px;height:30px;float:left;margin-top:-32px;margin-left:170px;text-align:center;line-height:30px;font-size:16px}
-
+#formInfo1{border:solid 1px #ccc;background-color:#d9e4fb;width:300px;height:450px;display:none;position:fixed;left:800px}
+#formInfo1 input{border:solid 1px #000;width:200px;height:40px;font-size:18px}
+#cancel1{width:60px;height:30px;float:left;margin-top:-32px;margin-left:170px;text-align:center;line-height:30px;font-size:16px}
 /*Usecase.jsp*/
 #all{
 	float:left;

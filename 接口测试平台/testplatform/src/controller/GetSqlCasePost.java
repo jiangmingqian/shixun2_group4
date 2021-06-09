@@ -82,9 +82,9 @@ public class GetSqlCasePost extends HttpServlet {
 			e.printStackTrace();
 		}
 		System.out.println("数据库连接");
-		String surl="jdbc:mysql://localhost:3307/testinterface?serverTimezone=UTC";
+		String surl="jdbc:mysql://localhost:3306/testinterface?serverTimezone=UTC";
 		String user="root";
-		String password="87654321";
+		String password="123456";
 		Connection conn;
 		try {
 			conn = DriverManager.getConnection(surl, user, password);

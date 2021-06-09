@@ -41,9 +41,9 @@ public class ServletOfDelete extends HttpServlet {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("数据库连接");
-			String surl="jdbc:mysql://localhost:3307/testinterface?serverTimezone=UTC";
+			String surl="jdbc:mysql://localhost:3306/testinterface?serverTimezone=UTC";
 			String user="root";
-			String password="87654321";
+			String password="123456";
 			Connection conn=DriverManager.getConnection(surl, user, password);
 			System.out.println("连接成功");
 //			容器

@@ -19,20 +19,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletInsert
+ * Servlet implementation class ServletUpdate
  */
-@WebServlet("/Insert")
-public class ServletInsert extends HttpServlet {
+@WebServlet("/Update")
+public class ServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletInsert() {
+    public ServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
-    }
-    private List<String> getColumnLabels(ResultSet resultSet)
+    }    private List<String> getColumnLabels(ResultSet resultSet)
 			throws SQLException {
 		List<String> labels = new ArrayList<String>();
 		ResultSetMetaData rsmd = (ResultSetMetaData) resultSet.getMetaData();
@@ -69,13 +68,13 @@ public class ServletInsert extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		System.out.println("执行了insert跳转");
+		System.out.println("执行了update跳转");
 		String id=request.getParameter("sid");
 		String casename=request.getParameter("scasename");
 		String reqway=request.getParameter("sreway");
 		String url=request.getParameter("surl");
 		String para=request.getParameter("spara");
-		String creator=request.getParameter("screator");
+		String owner=request.getParameter("screator");
 		String date=request.getParameter("sdate");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -89,9 +88,11 @@ public class ServletInsert extends HttpServlet {
 			PreparedStatement stmt0=(PreparedStatement) conn.prepareStatement(sql0);
 			ResultSet set0 = stmt0.executeQuery();
 			List<Map<String, Object>> values0 = handleResultSetToMapList(set0);
-			String sql1="insert into saveset(id,casename,reqway,url,para,owner,date) values("+id+",'"+casename+"','"+reqway+"','"+url+"','"+para+"','"+creator+"','"+date+"')";	
+			String sql1="insert into saveset(id,casename,reqway,url,para,owner,date) values("+id+",'"+casename+"','"+reqway+"','"+url+"','"+para+"','"+owner+"','"+date+"')";
 			System.out.println(sql1);
-			PreparedStatement stmt1=(PreparedStatement) conn.prepareStatement(sql1);
+			String sql2="update saveset set casename='"+casename+"', reqway = '"+reqway+"', url = '"+url+"', para = '"+para+"', owner = '"+owner+"', date = '"+date+"'where id ="+id;
+			System.out.println(sql2);
+			PreparedStatement stmt1=(PreparedStatement) conn.prepareStatement(sql2);
 			if(stmt1 != null) {
 				stmt1.executeUpdate();
 			}
@@ -124,16 +125,14 @@ public class ServletInsert extends HttpServlet {
 		}
 		
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		doGet(request, response);
-		
 	}
-		
 
 }

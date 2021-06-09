@@ -28,6 +28,7 @@ function alertFun (){
 	formInfo.style.display='block';
 	formInfo.style.marginTop='-50px';
 }
+
 function del(obj)
 {
 	var deleteform = document.getElementById('deleteformInfo');
@@ -35,60 +36,46 @@ function del(obj)
 	deleteform.style.marginTop='-50px';
 }
 
-function createTableCase(){
+function createTableCase(){ 
 	var table1 = document.getElementsByClassName('table1')[0];
 	var formInfo = document.getElementById('formInfo');
 	let id = formInfo.id.value;
-	let casename = formInfo.casename.value;
-	let reway = formInfo.reway.value;
-	let url = formInfo.url.value;
-	let para =formInfo.para.value;
+	let projectName = formInfo.projectName.value;
 	let creator = formInfo.creator.value;
 	let date = formInfo.date.value;
 	var tr = document.createElement("tr");
 	var tdcheckBox=document.createElement("td");
 	var tdId = document.createElement("td");
-	var tdCasename = document.createElement("td");
-	var tdReway = document.createElement("td");
-	var tdUrl = document.createElement("td");
-	var tdPara = document.createElement("td");
+	var tdProjectName = document.createElement("td");
 	var tdCreator = document.createElement("td");
 	var tdDate = document.createElement("td");
 	var tdEdit=document.createElement("td");
 	tdcheckBox.innerHTML = '<form method="post" action=""><input type="checkbox"></form>';
 	tdId.innerHTML = id;
-	tdCasename.innerHTML = casename;
-	tdReway.innerHTML = reway;
-	tdUrl.innerHTML = url;
-	tdPara.innerHTML = para;
+	tdProjectName.innerHTML = projectName;
 	tdCreator.innerHTML = creator;
 	tdDate.innerHTML = date;
-	tdEdit.innerHTML = '<td><a href="javascript:void(0);" onclick="alertFun()">编辑</a><a href="javascript:;" onclick="del(this);">删除</a></td>'
+	tdEdit.innerHTML = '<td><a href="javascript:void(0);"onclick="alertFun()">编辑</a><input type="button" value="删除" style="border:1px solid grey;background-color:white;text-align:center;width:30px;margin-left:16px;font-size:13px"></td>'
 	table1.appendChild(tr);
 	tr.appendChild(tdcheckBox);
 	tr.appendChild(tdId);
-	tr.appendChild(tdCasename);
-	tr.appendChild(tdReway);
-	tr.appendChild(tdUrl);
-	tr.appendChild(tdPara);
+	tr.appendChild(tdProjectName);
 	tr.appendChild(tdCreator);
 	tr.appendChild(tdDate);
 	tr.appendChild(tdEdit);
 	formInfo.style.display='none';
 	formInfo.id.value='';
-	formInfo.casename.value='';
-	formInfo.reway.value='';
-	formInfo.url.value='';
-	formInfo.para.value='';
+	formInfo.projectName.value='';
 	formInfo.creator.value='';
 	formInfo.date.value='';
 }
+
 function cancelTableCase(){
 	var formInfo = document.getElementById('formInfo');
 	formInfo.style.display='none';
 	formInfo.id.value='';
 	formInfo.casename.value='';
-	formInfo.reway.value='';
+	formInfo.reqway.value='';
 	formInfo.url.value='';
 	formInfo.para.value='';
 	formInfo.creator.value='';
@@ -99,6 +86,81 @@ function confirm(){
 	formInfo.style.display='none';
 }
 function cancel(){
+	var formInfo = document.getElementById('deleteformInfo');
+	formInfo.style.display='none';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function alert (){
+	var formInfo = document.getElementById('formInfo1');
+	formInfo.style.display='block';
+	formInfo.style.marginTop='-50px';
+}
+
+function createTableCase1(){ 
+	var table1 = document.getElementsByClassName('table1')[0];
+	var formInfo = document.getElementById('formInfo1');
+	let id = formInfo.id.value;
+	let projectName = formInfo.projectName.value;
+	let owner = formInfo.owner.value;
+	let date = formInfo.date.value;
+	var tr = document.createElement("tr");
+	var tdcheckBox=document.createElement("td");
+	var tdId = document.createElement("td");
+	var tdProjectName = document.createElement("td");
+	var tdCreator = document.createElement("td");
+	var tdDate = document.createElement("td");
+	var tdEdit=document.createElement("td");
+	tdcheckBox.innerHTML = '<form method="post" action=""><input type="checkbox"></form>';
+	tdId.innerHTML = id;
+	tdProjectName.innerHTML = projectName;
+	tdCreator.innerHTML = owner;
+	tdDate.innerHTML = date;
+	tdEdit.innerHTML = '<td><a href="javascript:void(0);"onclick="alert()">编辑</a><input type="button" value="删除" style="border:1px solid grey;background-color:white;text-align:center;width:30px;margin-left:16px;font-size:13px"></td>'
+	table1.appendChild(tr);
+	tr.appendChild(tdcheckBox);
+	tr.appendChild(tdId);
+	tr.appendChild(tdProjectName);
+	tr.appendChild(tdCreator);
+	tr.appendChild(tdDate);
+	tr.appendChild(tdEdit);
+	formInfo.style.display='none';
+	formInfo.id.value='';
+	formInfo.projectName.value='';
+	formInfo.owner.value='';
+	formInfo.date.value='';
+}
+
+function cancelTableCase1(){
+	var formInfo = document.getElementById('formInfo1');
+	formInfo.style.display='none';
+	formInfo.id.value='';
+	formInfo.casename.value='';
+	formInfo.reqway.value='';
+	formInfo.url.value='';
+	formInfo.para.value='';
+	formInfo.owner.value='';
+	formInfo.date.value='';
+}
+function confirm1(){
+	var formInfo = document.getElementById('deleteformInfo');
+	formInfo.style.display='none';
+}
+function cancel1(){
 	var formInfo = document.getElementById('deleteformInfo');
 	formInfo.style.display='none';
 }

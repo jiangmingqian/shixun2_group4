@@ -77,7 +77,7 @@
 		<br></br>
 		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 2px;margin-top:-10px">请求方法:</p>
 		<br></br> 
-		<input type='text' name='sreway' style="margin-right:-5px;margin-top:-40px;height:18px" value=${reway}> 
+		<input type='text' name='sreway' style="margin-right:-5px;margin-top:-40px;height:18px" value=${reqway}> 
 		<br></br>
 		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">URL:</p>
 		<br></br> 
@@ -89,7 +89,7 @@
 		<br></br>
 		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">创建者:</p>
 		<br></br> 
-		<input type='text' name='screator' style="margin-top:-40px;margin-right:5px;height:18px" value=${creator}> 
+		<input type='text' name='screator' style="margin-top:-40px;margin-right:5px;height:18px" value=${owner}> 
 		<br></br>
 		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">创建日期:</p>
 		<br></br> 
@@ -97,6 +97,40 @@
 		<br></br>
 		<input type="submit" id='confirm' value="确定"  onclick='createTableCase()' style='width:60px;margin-right:110px;height:30px;background-color:#eee'/>
 		<div id='cancel' onclick='cancelTableCase()' class='buttons' >取消</div>
+	</form>
+	
+	
+	  <form action="Update" method="post" id="formInfo1" >
+		<p style="margin-top: 10px; font-size: 16px; float: left; margin-left: 7px">序号:</p>
+		<br></br> 
+		<input type='text' name='sid' style="margin-right:2px;margin-top:-25px;height:18px" value=${id}> 
+		<br></br>
+		<p style="margin-top:10px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">用例名:</p>
+		<br></br> 
+		<input type='text' name='scasename' style="margin-top:-40px;height:18px;margin-right:2px" value=${casename}> 
+		<br></br>
+		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 2px;margin-top:-10px">请求方法:</p>
+		<br></br> 
+		<input type='text' name='sreway' style="margin-right:-5px;margin-top:-40px;height:18px" value=${reqway}> 
+		<br></br>
+		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">URL:</p>
+		<br></br> 
+		<input type='text' name='surl' style="margin-top:-40px;margin-right:2px;height:18px" value=${url}> 
+		<br></br>
+		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">参数:</p>
+		<br></br> 
+		<input type='text' name='spara' style="margin-top:-40px;margin-right:5px;height:18px" value=${para}> 
+		<br></br>
+		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">创建者:</p>
+		<br></br> 
+		<input type='text' name='screator' style="margin-top:-40px;margin-right:5px;height:18px" value=${owner}> 
+		<br></br>
+		<p style="margin-top: 50px; font-size: 16px; float: left; margin-left: 7px;margin-top:-5px">创建日期:</p>
+		<br></br> 
+		<input type='text' name='sdate' style="margin-top:-40px;margin-right:5px;height:18px" value=${date}> 
+		<br></br>
+		<input type="submit" id='confirm1' value="确定"  onclick='createTableCase1()' style='width:60px;margin-right:110px;height:30px;background-color:#eee'/>
+		<div id='cancel1' onclick='cancelTableCase1()' class='buttons' >取消</div>
 	</form>
 	<form action="delete" method="post" id="deleteformInfo" style="display:none">
 	  <p style="font-size: 16px; float: left;margin-left:5px;margin-top:10px">请输入你要删除的id:</p>
@@ -134,7 +168,7 @@
 		<td name="aowner">${cowner}</td>
 		<td name="adate">${cdate}</td>
 		<td>
-			<a href="javascript:void(0);" onclick="alertFun()">编辑</a>
+			<a href="javascript:void(0);" onclick="alert()">编辑</a>
 			<a href="javascript:void(0);" onclick="del(this)">删除</a>
 	</tr>
   
@@ -150,7 +184,7 @@
    		<td>${p._owner}</td>
   		<td>${p._date}</td>
    		<td>
-			<a href="javascript:void(0);" onclick="alertFun()">编辑</a>
+			<a href="javascript:void(0);" onclick="alert()">编辑</a>
 			<a href="javascript:void(0);" onclick="del(this)">删除</a>   			
    		</td>
    	</tr>
@@ -166,7 +200,7 @@
    		<td>${s.owner}</td>
   		<td>${s.date}</td>
    		<td>
-			<a href="javascript:void(0);" onclick="alertFun()">编辑</a>
+			<a href="javascript:void(0);" onclick="alert()">编辑</a>
 			<a href="javascript:void(0);" onclick="del(this)">删除</a> 			
    		</td>
    	</tr>
